@@ -1,0 +1,929 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Roboto:700"); /* Changed Lobster to Roboto Bold for a more modern logo */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  color: #495057; /* Default text color - a softer grey */
+}
+
+body {
+  background-color: #f8f9fa; /* Very light grey background for the page */
+}
+
+/* Header Styling */
+
+#home-section-2,
+#home-section-3 {
+  margin: 100px 0;
+}
+
+header {
+  z-index: 1000;
+}
+
+.navbar-brand {
+  height: 20em;
+  overflow: hidden;
+}
+
+.navbar-brand:before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -195%;
+  left: -25%;
+  height: 219%;
+  width: 200%;
+  background: #343a40; /* New Dark Grey for header background */
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+  transform: rotateZ(-6deg) skew(-6deg);
+}
+
+.navbar-brand .navbar-heading {
+  position: absolute;
+  top: 4vmax;
+  left: 2vmax;
+  padding: 0;
+  margin: 0;
+  color: #ffffff; /* White logo text */
+  font-size: 6em; /* Slightly reduced size for better fit with Roboto */
+  font-family: "Roboto", sans-serif; /* Changed to Roboto Bold */
+  font-weight: 700;
+  transform: rotateZ(-6deg);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Softer shadow */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar ul li {
+  float: left;
+  display: block;
+  transition-duration: 0.5s;
+  border-radius: 5px; /* Less rounded for a modern feel */
+}
+
+.navbar ul li:hover {
+  cursor: pointer;
+  background-color: #007bff; /* New Accent Blue */
+}
+
+.navbar ul li:hover > a {
+  color: #ffffff;
+}
+
+.navbar-menu li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  background-color: #495057; /* Darker grey for dropdown */
+}
+
+.navbar-menu li a {
+  display: block;
+  color: #6c757d; /* Standard text grey for nav links */
+  text-align: center;
+  padding: 12px 36px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-container {
+  position: absolute;
+  top: 8em;
+  right: 1%;
+}
+
+/*Footer Styling */
+
+footer {
+  display: grid;
+  grid-gap: 5px;
+  padding: 10px 10%;
+  background-color: #343a40; /* New Dark Grey for footer */
+  color: #f8f9fa; /* Light text for footer */
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+}
+.footer-brand {
+    overflow: hidden;
+  }
+  
+  .footer-brand:before {
+    content: "";
+    display: block;
+    position: relative;
+    background: #495057; /* Slightly lighter dark grey for footer logo bg */
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer-brand .footer-heading {
+    position: relative;
+    top: 1vmax;
+    left: 1vmax;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-size: 5em; /* Adjusted footer logo size */
+    font-family: "Roboto", sans-serif; /* Changed to Roboto Bold */
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Softer shadow */
+  }
+  
+.footer-section {
+  text-align: left;
+  padding: 20px;
+  width: 100%;
+}
+.footer-section-inner-container a {
+  display: block; 
+  text-decoration: none;
+  margin-bottom: 8px; 
+  transition: color 0.3s ease;
+  /* Color will be set on the span/i for directness */
+}
+
+.footer-section-inner-container a span,
+.footer-section-inner-container a i {
+  color: #adb5bd; /* Light grey for text and icon */
+  vertical-align: middle; /* Helps align icon and text nicely */
+}
+
+.footer-section-inner-container a i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.footer-section-inner-container a:hover span,
+.footer-section-inner-container a:hover i {
+  color: #007bff;    /* Accent blue on hover for text and icon */
+}
+.footer-section h2 { /* This will target all h2 elements within any .footer-section */
+  color: #f8f9fa; /* Light text color */
+  /* You can add other styling like font-size or margin if needed */
+  /* margin-bottom: 15px; Example */
+}
+
+.footer-section1 {
+  grid-row: 1;
+}
+
+.footer-section2 {
+  grid-column: 2 / span 2;
+}
+
+.footer-section3 {
+  grid-row: 2;
+  grid-column: 1 / span 3;
+}
+
+.footer-section3 > p {
+  float: left; /* This was already there from the original CSS */
+  color: #f8f9fa; /* Explicitly set light color for the paragraph */
+  margin-bottom: 0; /* Optional: removes any default bottom margin from p if not needed */
+}
+
+.footer-section3 > * {
+  display: inline;
+}
+
+.footer-section3 > a {
+  float: right;
+  padding: 0 20px;
+  color: #adb5bd; /* Lighter grey for footer links */
+}
+.footer-section3 > a:hover {
+  color: #007bff; /* Accent blue on hover */
+}
+
+
+.footer-section3 > p {
+  float: left;
+}
+
+.footer-section-inner-container {
+  margin: 15px 0;
+  padding: 25px;
+  width: 100%;
+  background-color: #495057; /* Slightly Lighter Dark Grey */
+  text-align: justify;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section-inner-container > span {
+  margin: 10px 0;
+}
+
+/* Movie Section Styling */
+
+.movie-show-container {
+  margin-top: 0;
+  padding: 0 10%;
+}
+
+.movie-show-container > h1 {
+  color: #0056b3; /* Darker Blue for main headings */
+  text-align: left;
+  padding: 0 0 10px 0;
+}
+
+.movie-show-container > h3 {
+  color: #6c757d; /* Standard text grey */
+  text-align: left;
+  padding: 0 0 10px 0;
+}
+
+.movie-show-container > h3:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 7%;
+  background: #007bff; /* New Accent Blue for underlines */
+  position: relative;
+  bottom: -10px;
+}
+
+.movies-container {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto auto auto auto auto auto;
+  padding: 10px 0;
+}
+
+.movie-box {
+  position: relative;
+  margin: 10px 0;
+  border-radius: 5px; /* Slight rounding to movie boxes */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.movie-box img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.movie-box .movie-info {
+  padding: 50% 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.7s ease;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+}
+
+.movie-box:hover .movie-info {
+  opacity: 1; /* Full opacity for better readability */
+}
+
+.movie-info > h3 {
+  padding: 10px 0;
+  color: #fff;
+}
+
+.movie-info > a {
+  display: inline-block;
+  padding: 0.5em 1.5em; /* Slightly larger padding */
+  border: 2px solid #007bff; /* Accent blue border */
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff; /* Accent blue background */
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.movie-info > a:hover {
+  color: #ffffff;
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3;
+}
+
+/* Trailers Section */
+
+.trailers-section > h1,
+.trailers-section > h3 {
+  padding: 0 10%;
+}
+
+.trailers-section > h1 {
+  text-align: left;
+  color: #0056b3; /* Darker Blue */
+}
+
+.trailers-section > h3 {
+  text-align: left;
+  color: #6c757d;
+}
+
+.trailers-section > h3:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 7%;
+  background: #007bff; /* Accent Blue */
+  position: relative;
+  bottom: -10px;
+}
+
+.trailers-grid {
+  margin: 60px 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 80vh;
+}
+
+.trailers-grid-item {
+  font-size: 30px;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  vertical-align: middle;
+}
+
+.trailer-item-video {
+  width: 100%;
+  height: 100%;
+}
+
+.trailers-grid-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.trailer-item-info {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 10;
+  vertical-align: middle;
+  opacity: 0;
+  transition: 0.7s ease;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+  padding: 85px 0;
+}
+
+.trailer-item-info:hover {
+  opacity: 1;
+}
+
+.trailer-item-info h3 {
+  vertical-align: middle;
+  color: rgb(255, 255, 255);
+}
+
+.trailer-item-info i {
+  margin: 10px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Services Section Styling */
+
+.services-section {
+  padding: 0 10%;
+  text-align: center;
+}
+
+.services-section > h1 {
+  color: #0056b3; /* Darker Blue */
+  text-align: left;
+  padding: 0 0 10px 0;
+}
+
+.services-section > h3 {
+  color: #6c757d;
+  text-align: left;
+  padding: 0 0 20px 0;
+}
+
+.services-section > h3:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 7%;
+  background: #007bff; /* Accent Blue */
+  position: relative;
+  bottom: -10px;
+}
+
+.services-container {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 4%;
+}
+
+.service-item > h2 {
+  color: #343a40; /* Dark Grey for service item titles */
+  padding: 25px 0;
+}
+
+.service-item-icon i {
+  font-size: 40px;
+  color: white;
+  height: 120px;
+  width: 120px;
+  background-color: #007bff; /* Accent Blue for icons */
+  border-radius: 50%;
+  border: #dee2e6 12px solid; /* Lighter border */
+  line-height: 90px;
+  transition: all 0.5s ease;
+}
+
+.service-item-icon i:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: #ffffff;
+}
+
+/* Booking Panel */
+
+.booking-panel {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: 1fr 3fr;
+  background-color: #fff;
+  padding: 40px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: all 0.7s ease;
+  width: 90%;
+  /* height: 100vh; */ /* Removed fixed height for content flow */
+  min-height: 90vh;
+  margin: 20px auto; /* Added some margin */
+  border-radius: 8px;
+}
+
+.booking-panel-section1 {
+}
+
+.booking-panel-section2 {
+}
+
+.booking-panel-section2 > i {
+  background-color: #6c757d; /* Standard Grey */
+  color: #fff;
+  padding: 15px;
+  float: right;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 50%; /* Rounded close button */
+}
+
+.booking-panel-section2 > i:hover {
+  background-color: #343a40; /* Darker grey on hover */
+}
+
+.booking-panel-section3 > .movie-box {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.booking-panel-section3 img {
+  max-width: 100%;
+}
+
+.booking-panel-section3 > .movie-box {
+  margin: 0;
+}
+
+.booking-panel-section4 {
+  border-radius: 10px;
+  border: 1px #dee2e6 solid; /* Lighter border */
+  background-color: #fff;
+}
+
+.booking-panel-section4 > .title {
+  border-bottom: 1px #dee2e6 solid; /* Lighter border */
+  color: #0056b3; /* Darker Blue for title */
+  padding: 0 0 15px 0;
+  margin: 0 0 15px 0;
+  font-size: 24pt;
+  padding: 35px 35px 20px 35px;
+  font-weight: bold;
+}
+
+.movie-information > table {
+  padding: 0 35px 0 35px;
+}
+
+.movie-information td {
+  padding: 8px 25px 8px 0;
+  text-align: left;
+  color: #495057; /* Softer grey text */
+}
+
+.movie-information table tr td:first-child {
+  color: #212529; /* Darker grey for labels */
+  font-weight: bold;
+}
+
+.booking-form-container {
+  background-color: #e9ecef; /* Lighter grey for form background */
+  width: 100%;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+}
+
+.booking-form-container form {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.booking-form-container form button {
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  float: right;
+  width: 100%; /* Full width button */
+  text-align: center;
+  background-color: #007bff; /* Accent Blue */
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 42px;
+  font-weight: bold;
+}
+
+.booking-form-container form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.booking-form-container form select,
+.booking-form-container form input {
+  padding: 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: #fff url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE1cHgiIGhlaWdodD0iOHB4IiB2aWV3Qm94PSIwIDAgMTUgOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTUgOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+ICA8cGF0aCBmaWxsPSIjODk4OTg5IMKgIiBkPSJNMS4wMywwLjE3NWMtMC4yMzYtMC4yMzMtMC42MTgtMC4yMzMtMC44NTQsMGMtMC4yMzUsMC4yMzItMC4yMzYsMC42MSwwLDAuODQybDYuODk3LDYuODA5ICAgIGMwLjIzNiwwLjIzMywwLjYxOCwwLjIzMywwLjg1NCwwbDYuODk3LTYuODA5YzAuMjM2LTAuMjMzLDAuMjM2LTAuNjEsMC0wLjg0MmMtMC4yMzYtMC4yMzMtMC42MTgtMC4yMzMtMC44NTQsMEw3LjUsNi4zODQgICAgTDEuMDMsMC4xNzV6Ii8+ICA8L3N2Zz4=) no-repeat calc(100% - 10px) 50%;
+  box-sizing: border-box;
+  border: solid 1px #ced4da; /* Lighter border for inputs */
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  color: #495057;
+  text-indent: 0.01px;
+  text-overflow: "";
+  width: 48%; /* Adjust width for two inputs per row */
+  height: 42px;
+  margin: 1%; /* Small margin around inputs */
+}
+.booking-form-container form input[name="fName"],
+.booking-form-container form input[name="lName"],
+.booking-form-container form input[name="pNumber"],
+.booking-form-container form input[name="email"] {
+    width: 48%; /* Two text inputs per row */
+}
+
+
+/* Schedule Styling */
+
+.schedule-section {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #ffffff; /* White background for schedule section */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.schedule-section > h1 {
+  padding: 0 0 20px 0;
+  margin: 0 0 40px 0;
+  border-bottom: 1px #dee2e6 solid; /* Lighter border */
+  color: #0056b3; /* Darker Blue */
+}
+
+.schedule-dates {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  flex-wrap: wrap; /* Allow dates to wrap on smaller screens */
+}
+
+.schedule-item {
+  padding: 10px 20px; /* Adjusted padding */
+  background-color: #007bff; /* Accent Blue */
+  margin-right: 10px;
+  margin-bottom: 10px; /* Margin for wrapped items */
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.schedule-item:hover {
+  background-color: #0056b3; /* Darker Blue on hover */
+  color: #ffffff;
+}
+
+.schedule-item-selected {
+  color: #ffffff;
+  background-color: #0056b3; /* Darker Blue for selected */
+  cursor: auto;
+}
+
+.schedule-table table {
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%; /* Ensure table takes full width */
+}
+
+.schedule-table table tr th {
+  padding: 10px 0 10px 40px;
+  background-color: #495057; /* Darker Grey for table headers */
+  border: 1px #dee2e6 solid; /* Lighter border */
+  color: #fff;
+}
+
+.schedule-table table tr th:first-child {
+  width: 35%;
+  border-right: 1px #dee2e6 solid;
+}
+
+.schedule-table table tr td {
+  padding: 20px; /* Reduced padding */
+  border: 1px #dee2e6 solid;
+}
+
+.schedule-table table tr td > h2 {
+  margin: 0 0 10px 0px; /* Reduced margin */
+  color: #0056b3; /* Darker blue for movie titles in schedule */
+}
+
+.schedule-table table tr td > h3 {
+  margin: 10px 0px;
+  font-size: 0.9em;
+  color: #343a40;
+}
+
+.schedule-table table tr td > p {
+  margin: 0 0 10px 0px;
+  font-size: 0.9em;
+}
+
+.schedule-table table tr td > i {
+  margin: 0 5px 0 0; /* Adjusted icon margin */
+}
+
+.schedule-table table tr td > .schedule-item { /* The "DETAILS" button */
+  width: auto; /* Auto width for button */
+  padding: 8px 15px;
+  margin: 10px 0 0 0; /* Adjusted margin */
+  text-align: center;
+  font-weight: bold;
+  display: inline-block; /* So it doesn't take full width */
+}
+
+.hall-type > h3 {
+  margin: 15px 0 5px 0;
+  color: #343a40;
+}
+
+.hall-type > div {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.hall-type > div .schedule-item { /* Time slots */
+  cursor: auto;
+  background-color: #6c757d; /* Grey for time slots */
+  font-size: 0.9em;
+  padding: 5px 10px;
+}
+.hall-type > div .schedule-item:hover {
+  background-color: #495057;
+}
+
+
+/* Contact Us Styling */
+
+#gmap_canvas {
+  width: 100%;
+  height: 300px; /* Reduced map height */
+  border-radius: 8px;
+}
+
+.contact-us-container {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: 2fr 1fr; /* Adjusted column ratio */
+  margin: 30px 10%; /* Reduced margin */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-us-section {
+  overflow: hidden;
+}
+
+.contact-us-section h1 {
+  padding: 0 0 15px 0; /* Reduced padding */
+  border-bottom: #dee2e6 solid 1px; /* Lighter border */
+  margin-bottom: 15px;
+  color: #0056b3; /* Darker Blue */
+}
+
+.contact-us-section1 {
+  /* grid-area: contact-form; */ /* No longer needed with direct grid-template-columns */
+}
+
+.contact-us-section1 form * {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%; /* Full width inputs */
+  border-radius: 4px;
+}
+
+.contact-us-section1 form *:not(button) {
+  border: #ced4da 1px solid; /* Lighter input border */
+}
+
+.contact-us-section1 form button {
+  background-color: #007bff; /* Accent Blue */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.contact-us-section1 form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-us-section2 {
+  /* grid-area: contact-info; */
+}
+
+.contact-us-section2 h3 {
+  color: #343a40; /* Dark Grey */
+  border-bottom: #007bff solid 1px; /* Accent Blue underline */
+  padding: 10px 0;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+.contact-us-section2 p {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+.contact-us-section2 p a {
+  color: #007bff;
+}
+.contact-us-section2 p a:hover {
+  text-decoration: underline;
+}
+
+
+/* Admin Panel Styling - Basic color changes to align with new theme */
+
+.admin-section-header {
+  color: #fff;
+  width: 100%;
+  background-color: #343a40; /* Dark Grey */
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.admin-logo {
+  padding: 20px 10px;
+  background-color: #495057; /* Slightly Lighter Dark Grey */
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.admin-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.admin-section1 {
+  background-color: #343a40; /* Dark Grey */
+  height: 100vh;
+}
+
+.admin-section1 ul li {
+  width: 100%;
+  padding: 20px 10px;
+  background-color: #343a40; /* Dark Grey */
+  color: #f8f9fa; /* Light Text */
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.admin-section1 ul li:hover {
+  background-color: #007bff; /* Accent Blue */
+  color: #fff;
+  border-left: #fff 3px solid;
+}
+
+.admin-section1 ul ul {
+  background-color: #495057; /* Slightly Lighter Dark Grey */
+  margin-bottom: 1px;
+}
+
+.admin-section1 ul ul li {
+  background-color: #495057;
+  margin-bottom: 1px;
+}
+
+.admin-panel-section-header > h2 {
+  color: #495057; /* Softer Grey */
+}
+
+.admin-panel-section-header > i {
+  background-color: #007bff !important; /* Accent Blue for icons, important if inline styles exist */
+}
+
+.admin-section-panel2 form button {
+  background-color: #007bff; /* Accent Blue */
+}
+
+.admin-section-panel2 form button:hover {
+  background-color: #0056b3; /* Darker Blue */
+}
+
+
+/* Responsive Properties */
+
+@media all and (max-width: 768px) { /* Example breakpoint for tablets */
+  .navbar-brand { height: 15em; }
+  .navbar-brand .navbar-heading { font-size: 4em; top: 3vmax; }
+  .navbar-container { top: 6em; }
+  .movies-container { grid-template-columns: auto auto auto; } /* 3 movies per row */
+  .trailers-grid { grid-template-columns: auto auto; height: auto; } /* 2 trailers per row */
+  .services-container { grid-template-columns: auto; } /* 1 service item per row */
+  .booking-panel { grid-template-columns: 1fr; height: auto; } /* Stack booking panel sections */
+  .booking-form-container form select,
+  .booking-form-container form input { width: 100%; margin: 10px 0; }
+  .contact-us-container { grid-template-columns: 1fr; grid-template-areas: "contact-form" "contact-info"; margin: 20px 5%;}
+  .admin-container { grid-template-columns: 1fr; }
+  .admin-section1 { height: auto; } /* Admin sidebar auto height */
+}
+
+@media all and (max-width: 480px) { /* Example breakpoint for mobile */
+  .navbar-brand .navbar-heading { font-size: 3em; }
+  .movies-container { grid-template-columns: auto auto; } /* 2 movies per row */
+  .trailers-grid { grid-template-columns: auto; } /* 1 trailer per row */
+  .schedule-section { width: 95%; }
+  .schedule-table table tr th:first-child { width: 100%; display:block; border-right: none; }
+  .schedule-table table tr td { display:block; width: 100%; padding: 10px; }
+  .schedule-table table tr td:last-child { border-bottom: 2px solid #343a40; }
+
+
+}
+
+
+/* Classes for JS */
+
+.hidden-div {
+  display: none;
+  transition: all 0.7s ease;
+}
+
+.show {
+  display: block;
+  transition: all 0.7s ease;
+}
