@@ -37,9 +37,8 @@ Please make sure to update tests as appropriate.
 
 
 ##  IMAGES
-<img src="img/screenshot/1.png">
+<img src="img/HomePage.png">
 <img src="img/screenshot/2.png">
-<img src="img/screenshot/3.png">
 <img src="img/screenshot/4.png">
 <img src="img/screenshot/5.png">
 <img src="img/screenshot/6.png">
